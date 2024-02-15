@@ -1,0 +1,201 @@
+import tkinter as tk
+def submit_form():
+    print("Submitted successfully") 
+    name = name_entry.get()
+    age = age_entry.get()
+    email = email_entry.get()
+    phone = phone_entry.get()
+    dob = dob_entry.get()
+    father_name = father_name_entry.get()
+    mother_name = mother_name_entry.get()
+    father_occupation = father_occupation_entry.get()
+    mother_occupation = mother_occupation_entry.get()
+    address = address_entry.get("1.0", "end-1c")
+    division = division_entry.get()
+    caste = caste_var.get()
+    admission_type = admission_type_var.get()
+    gender = gender_var.get()
+    blood_group = blood_group_entry.get()
+    region = region_entry.get()
+    status = status_var.get()
+    aadhaar = aadhaar_entry.get()
+    school_name = school_name_entry.get()
+    marks_12th = marks_12th_entry.get()
+    marks_10th = marks_10th_entry.get()
+    quota = quota_var.ge
+
+    print("Name:", name)
+    print("Age:", age)
+    print("Email:", email)
+    print("Phone Number:", phone)
+    print("Date of Birth:", dob)
+    print("Father's Name:", father_name)
+    print("Mother's Name:", mother_name)
+    print("Father's Occupation:", father_occupation)
+    print("Mother's Occupation:", mother_occupation)
+    print("Address:", address)
+    print("Division:", division)
+    print("Caste:", caste)
+    print("Admission Type:", admission_type)
+    print("Gender:", gender)
+    print("Blood Group:", blood_group)
+    print("Region:", region)
+    print("Status:", status)
+    print("Aadhaar Number:", aadhaar)
+    print("School Name:", school_name)
+    print("12th Marks:", marks_12th)
+    print("10th Marks:", marks_10th)
+    print("Quota:", quota)
+
+root = tk.Tk()
+root.title("College Admission Form")
+
+# Heading
+heading_label = tk.Label(root, text="College Admission Form", font=("Helvetica", 18, "bold"))
+heading_label.grid(row=0, columnspan=2, pady=10)
+
+# Name
+name_label = tk.Label(root, text="Name:")
+name_label.grid(row=1, column=0)
+name_entry = tk.Entry(root)
+name_entry.grid(row=1, column=1)
+
+# Age
+age_label = tk.Label(root, text="Age:")
+age_label.grid(row=2, column=0)
+age_entry = tk.Entry(root)
+age_entry.grid(row=2, column=1)
+
+# Email
+email_label = tk.Label(root, text="Email:")
+email_label.grid(row=3, column=0)
+email_entry = tk.Entry(root)
+email_entry.grid(row=3, column=1)
+
+# Phone Number
+phone_label = tk.Label(root, text="Phone Number:")
+phone_label.grid(row=4, column=0)
+phone_entry = tk.Entry(root)
+phone_entry.grid(row=4, column=1)
+
+# Date of Birth
+dob_label = tk.Label(root, text="Date of Birth:")
+dob_label.grid(row=5, column=0, sticky="e")
+dob_entry = tk.Entry(root)
+dob_entry.grid(row=5, column=1)
+
+# Father's Name
+father_name_label = tk.Label(root, text="Father's Name:")
+father_name_label.grid(row=6, column=0)
+father_name_entry = tk.Entry(root)
+father_name_entry.grid(row=6, column=1)
+
+# Mother's Name
+mother_name_label = tk.Label(root, text="Mother's Name:")
+mother_name_label.grid(row=7, column=0)
+mother_name_entry = tk.Entry(root)
+mother_name_entry.grid(row=7, column=1)
+
+# Father's Occupation
+father_occupation_label = tk.Label(root, text="Father's Occupation:")
+father_occupation_label.grid(row=8, column=0)
+father_occupation_entry = tk.Entry(root)
+father_occupation_entry.grid(row=8, column=1)
+
+# Mother's Occupation
+mother_occupation_label = tk.Label(root, text="Mother's Occupation:")
+mother_occupation_label.grid(row=9, column=0)
+mother_occupation_entry = tk.Entry(root)
+mother_occupation_entry.grid(row=9, column=1)
+
+# Address
+address_label = tk.Label(root, text="Address:")
+address_label.grid(row=10, column=0)
+address_entry = tk.Text(root, height=4, width=20)
+address_entry.grid(row=10, column=1)
+
+# Division
+division_label = tk.Label(root, text="Division:")
+division_label.grid(row=11, column=0)
+division_entry = tk.Entry(root)
+division_entry.grid(row=11, column=1)
+
+# Caste
+caste_label = tk.Label(root, text="Caste:")
+caste_label.grid(row=12, column=0)
+caste_var = tk.StringVar(root)
+caste_var.set("General")
+caste_menu = tk.OptionMenu(root, caste_var, "General", "OBC", "SC", "ST")
+caste_menu.grid(row=12, column=1)
+
+# Admission Type
+admission_type_label = tk.Label(root, text="Admission Type:")
+admission_type_label.grid(row=13, column=0)
+admission_type_var = tk.StringVar(root)
+admission_type_var.set("Regular")
+admission_type_menu = tk.OptionMenu(root, admission_type_var, "Regular", "Management Quota", "Sports Quota", "Other")
+admission_type_menu.grid(row=13, column=1)
+
+# Gender
+gender_label = tk.Label(root, text="Gender:")
+gender_label.grid(row=14, column=0)
+gender_var = tk.StringVar(root)
+gender_var.set("Male")
+gender_menu = tk.OptionMenu(root, gender_var, "Male", "Female", "Other")
+gender_menu.grid(row=14, column=1)
+
+# Blood Group
+blood_group_label = tk.Label(root, text="Blood Group:")
+blood_group_label.grid(row=15, column=0)
+blood_group_entry = tk.Entry(root)
+blood_group_entry.grid(row=15, column=1)
+
+# Region
+region_label = tk.Label(root, text="Region:")
+region_label.grid(row=16, column=0)
+region_entry = tk.Entry(root)
+region_entry.grid(row=16, column=1)
+
+# Status
+status_label = tk.Label(root, text="Status:")
+status_label.grid(row=17, column=0)
+status_var = tk.StringVar(root)
+status_var.set("Single")
+status_menu = tk.OptionMenu(root, status_var, "Single", "Married", "Divorced", "Widowed")
+status_menu.grid(row=17, column=1)
+
+# Aadhaar Number
+aadhaar_label = tk.Label(root, text="Aadhaar Number:")
+aadhaar_label.grid(row=18, column=0, sticky="e")
+aadhaar_entry = tk.Entry(root)
+aadhaar_entry.grid(row=18, column=1)
+
+# School Name
+school_name_label = tk.Label(root, text="School Name:")
+school_name_label.grid(row=19, column=0, sticky="e")
+school_name_entry = tk.Entry(root)
+school_name_entry.grid(row=19, column=1)
+
+# 12th Marks
+marks_12th_label = tk.Label(root, text="12th Marks:")
+marks_12th_label.grid(row=20, column=0, sticky="e")
+marks_12th_entry = tk.Entry(root)
+marks_12th_entry.grid(row=20, column=1)
+
+# 10th Marks
+marks_10th_label = tk.Label(root, text="10th Marks:")
+marks_10th_label.grid(row=21, column=0, sticky="e")
+marks_10th_entry = tk.Entry(root)
+marks_10th_entry.grid(row=21, column=1)
+
+# Quota
+quota_label = tk.Label(root, text="Quota:")
+quota_label.grid(row=22, column=0, sticky="e")
+quota_var = tk.StringVar(root)
+quota_var.set("Government")
+quota_menu = tk.OptionMenu(root, quota_var, "Government", "Management")
+quota_menu.grid(row=22, column=1)
+
+# Submit button
+submit_button = tk.Button(root, text="Submit", command=submit_form)
+submit_button.grid(row=23, column=1, pady=10)
